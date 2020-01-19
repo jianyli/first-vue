@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue练习</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+    <hr/>
+    <div id="app-2">
+        <span v-bind:title="message">
+            查看此处信息
+        </span>
+    </div>
+    <br>
+    <div id="app-3">
+        <p v-if="seen">你能看到我吗</p>
+    </div>
+    <br>
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
+    </div>
+    <div id="app-5">
+        <div>{{message}}</div>
+        <button v-on:click="reverse">逆转消息</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
